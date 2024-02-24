@@ -1,8 +1,184 @@
-.student{
-  border:1px solid;
-  font-family:Arial, sans-serif;
-  width:300px;
-  padding:20px;
-  margin-top:20px;
-  
+body {
+    background-image: url('public/img.jpg');
+    background-size: cover;
+    background-position:top-center; 
+    background-repeat:no-repeat;
+    background-size: 2000px;
+    background-color: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    
+    
+    
+}
+
+.menubar{
+display:flex;
+flex-wrap:wrap;
+margin-left:870px;
+padding:20px;
+}
+
+.custom-link {
+    text-decoration: none; 
+    color: rgba(255, 255, 255, 0.7); /* White color with 70% opacity */
+    margin-left: 15px;
+    font-size: 22px;
+}
+
+.custom-link:hover {
+    color: rgba(255, 255, 255, 1); 
+}
+
+
+.join {
+    text-align: center;
+    margin-left:150px;
+    width: 80%;
+    overflow: hidden;
+    margin-top:100px;
+}
+
+.ex{
+    font-size: 80px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 0.1;
+    word-wrap: break-word;
+    animation: slideFromLeft 1.5s ease-in-out; 
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.arrow-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid white;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; /* Add transition effect */
+    animation: bounce 1s infinite alternate; /* Apply the bounce animation */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px); /* Adjust the distance of bounce */
+    }
+}
+
+.categories{
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    margin-top:268px;
+    width:1300px;
+    margin-left:128px;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    align-items: flex-start; 
+
+    
+}
+.card{
+    height:300px;
+    width:270px;
+    background-color:rgb(182, 174, 174);
+    margin-top:20px;
+}
+.SER{
+    width:100%;
+    padding-left:420px;
+    
+}
+.des{
+    font-size:80px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(142, 142, 189);
+}
+.card {
+    background-color: #f5f4ea;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    height: 370px;
+    margin-bottom: 17px;
+    box-sizing: border-box;
+    margin-right: 10px; /* Adjust margin for spacing */
+}
+
+.card img {
+    width:300px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+	margin-top:-20px;
+	margin-left:-20px;
+	height:200px;
+}
+
+
+.card p {
+    margin-bottom: 10px;
+}
+.course-title {
+    font-weight: lighter;
+    font-size:18px;
+	margin-top:-10px;
+    margin-bottom: 5px;
+
+}
+
+.ratings {
+    margin-top:5px;
+
+}
+
+.rating-star {
+    color: #f1c40f;
+}
+.enroll-btn:hover {
+    background-color: #0056b3;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Adjust hover scale if needed */
+}
+.enroll-btn {
+  display: inline-block;
+  background-color: #007bff; /* Set your desired button background color */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.enroll-btn:hover {
+  background-color: #0056b3;
+}
+.course-title {
+    font-weight: lighter;
+    font-size:18px;
+	margin-top:-10px;
+    font-weight:bold;
+    margin-bottom: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(142, 142, 189);
+
 }
