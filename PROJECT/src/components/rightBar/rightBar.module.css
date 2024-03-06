@@ -1,0 +1,98 @@
+@import "../../App.css";
+
+.rightbar {
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    background-color: var(--bg-soft);
+    @media(max-width: 480px) {
+        display: none;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .container {
+        padding: 20px;
+
+        .item {
+            box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 4px 4px 10px -1px rgba(0, 0, 0, 0.75);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: var(--bg);
+
+            span {
+                color: grey;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 10px 0px;
+
+                .userInfo {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    position: relative;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .online{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: limegreen;
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                    }
+
+                    p{
+                        color: var(--text-color-soft);
+                    }
+
+                    span {
+                        font-weight: 500;
+                        color: var(--text-color);
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    button {
+                        border: none;
+                        padding: 5px;
+                        color: white;
+                        cursor: pointer;
+                        border-radius: 5px;
+
+                        &:first-child {
+                            background-color: #5271ff;
+                        }
+
+                        &:last-child {
+                            background-color: #f0544f;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
