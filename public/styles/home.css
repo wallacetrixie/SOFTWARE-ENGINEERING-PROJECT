@@ -1,0 +1,653 @@
+body {
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-position:top-center; 
+    background-repeat:no-repeat;
+    background-size: 2000px;
+    background-color: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    
+}
+
+
+/* Styles for the menu items */
+.menu-items {
+    display: flex;
+    justify-content: flex-end;
+    /* Align menu items to the right initially */
+    align-items: center;
+    gap: 20px;
+    /* Adjust the space between menu items */
+}
+
+/* Styles for the hamburger menu */
+.menu-toggle {
+    display: none;
+    /* Hide by default for larger screens */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+    /* Hide by default for larger screens */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.menu-toggle i {
+    font-size: 26px;
+    /* Adjust the size of the icon */
+    color: #e7dddd;
+    /* Adjust the color of the icon */
+}
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu-items {
+        display: none;
+        /* Hide the menu items by default for smaller screens */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Show the menu toggle for smaller screens */
+    }
+
+    .menu-open .menu-items {
+        display: flex;
+        flex-direction: column;
+        /* Align menu items in a vertical column when open */
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        padding: 10px;
+        background: conic-gradient(from 315deg, rgb(109, 98, 98), rgb(175, 175, 171));
+        font-size: 10px;
+        z-index: 999;
+        /* Ensure it's above other content */
+    }
+
+
+
+
+}
+
+.custom-link {
+    text-decoration: none;
+    color: white;
+    /* White color with 70% opacity */
+    margin-left: 15px;
+    font-size: 22px;
+}
+
+.custom-link:hover {
+    color: rgb(233, 138, 138);
+}
+
+
+.join {
+    margin-left: 150px;
+    width: 80%;
+    overflow: hidden;
+    margin-top: 300px;
+}
+
+.join p {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.ex {
+    font-size: 80px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-wrap: break-word;
+    animation: slideFromLeft 1.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .ex {
+        font-size: 20px;
+    }
+
+    .join {
+        margin-top: -1px;
+    }
+}
+
+/* Add more media queries as needed for different screen sizes */
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.arrow-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid white;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    /* Add transition effect */
+    animation: bounce 1s infinite alternate;
+    /* Apply the bounce animation */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+        /* Adjust the distance of bounce */
+    }
+}
+
+.categories {
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    margin-top: 153px;
+    width: 100%px;
+    margin-right: -100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+
+}
+
+.div-card {
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    border: 0px;
+    margin-top: -40px;
+    margin-bottom: 100px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.);
+}
+
+.card {
+    height: 300px;
+    width: 270px;
+    background-color: rgb(182, 174, 174);
+    margin-top: 20px;
+}
+
+.SER {
+    width: 300px;
+
+
+
+
+}
+
+.des {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(142, 142, 189);
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    height: 370px;
+    margin-bottom: 17px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    /* Adjust margin for spacing */
+}
+
+.card img {
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    margin-left: -20px;
+    height: 200px;
+}
+
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.course-title {
+    font-weight: lighter;
+    font-size: 18px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+
+}
+
+.ratings {
+    margin-top: 5px;
+
+}
+
+.rating-star {
+    color: #f1c40f;
+}
+
+.enroll-btn:hover {
+    background-color: #0056b3;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Adjust hover scale if needed */
+}
+.cards{
+    margin-bottom:50px;
+}
+.enroll-btn {
+    display: inline-block;
+    background-color: #007bff;
+    /* Set your desired button background color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.enroll-btn:hover {
+    background-color: #0056b3;
+}
+
+.course-title {
+    font-weight: lighter;
+    font-size: 18px;
+    margin-top: -10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(142, 142, 189);
+
+}
+
+.steps {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+    margin-top: -8px;
+    margin-bottom: -5px;
+    border: 0px;
+    padding-right: 100px;
+    display: flex;
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+}
+
+.description {
+    width: 30%;
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    color: #939fb3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.description p {
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.image-container {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-container {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.step {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border: 8px solid #ad89bb;
+    border-radius: 50%;
+    color: #5c6bc0;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    line-height: 42px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+
+.circle i {
+    font-size: 24px;
+}
+
+.text {
+    width: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #939fb3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text p {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5px 0;
+    color: #6e6468;
+}
+
+.testimonials {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    padding-left: 100px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+
+}
+
+.testimonials .cards {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+}
+
+.testimonials .card {
+    flex: 0 0 20%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    text-align: center;
+}
+
+.testimonials .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.Test {
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(142, 142, 189);
+    background: rgb(255, 255, 255);
+    background: conic-gradient(from 315deg, rgba(249, 249, 249, 1.0), rgba(227, 236, 232, 1.0));
+    text-align: center;
+}
+
+.card h3 {
+    color: #5f6a7a;
+}
+
+.card p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #707375;
+}
+
+/* Add animation effect */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+#thumbs-up {
+    font-size: 60px;
+    color: #939fb3;
+    transition: all 0.5s ease-in-out;
+
+}
+
+
+#thumbs-up:hover {
+    transform: scale(1.4);
+    color: rgb(243, 46, 46);
+    cursor: pointer;
+    animation: bounce 0.6s;
+
+}
+
+#medal {
+    font-size: 150px;
+
+}
+
+.head {
+    margin-right: 100px;
+}
+
+.show {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    margin-top: -90px;
+}
+
+.show i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.show:hover i {
+    opacity: 1;
+    margin-left: 5px;
+}
+
+.show:hover {
+    padding-right: 30px;
+
+}
+
+
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 20px 20px;
+    background: conic-gradient(from 315deg, rgb(243, 231, 231), rgb(221, 221, 206));
+    width:100%;
+}
+
+.footer-section {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(142, 142, 189);
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.footer-section a {
+    color: rgb(60, 61, 60);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #000;
+}
+
+
+.copyright {
+    background: conic-gradient(from 315deg, rgb(243, 231, 231), rgb(221, 221, 206));
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(241, 237, 195);
+padding-left:400px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+    }
+}
+
+
+
+.copyright p {
+    margin: 0;
+    color: #939fb3;
+}
+
+.foot {
+    display: inline-block;
+    border: 0px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.subscribe {
+    display: inline-block;
+    border: 0px;
+    background-color: rgb(218, 72, 72);
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .menubar {
+        margin-left: 20px;
+    }
+
+    .join {
+        margin-left: 20px;
+    }
+}

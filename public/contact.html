@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out using the information below.</p>
+        
+        <div class="contact-info">
+            <div class="info-item">
+                <h2>Email</h2>
+                <p>wallacewambulwa@gmail.com</p>
+            </div>
+            
+            <div class="info-item">
+                <h2>Phone</h2>
+                <p>+254705103864</p>
+            </div>
+        </div>
+        
+        <form class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="wallace@example.com" required>
+            
+            <label for="message" >Your Message</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." required class="message" id="text"></textarea>
+            
+            <button type="submit">Submit Message</button>
+              <button  class="delete" onclick="delete_message()">Clear Details</button>
+        </form>
+    </div>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d6f5f1e7;
+}
+.message{
+height:200px;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size:18px;
+
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:150px;
+}
+.delete {
+    background-color:red;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight:bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+    <script>
+        function delete_message(){
+            document.getElementById("text").value;
+            document.getElementById("text").value="";
+        }
+    </script>
+</body>
+</html>

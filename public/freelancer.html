@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Homepage</title>
+</head>
+<body>
+    <div id="content">
+        <nav>
+            <h1 class="head">Taskify</h1>
+            <form action="#" class="search-form">
+                <div class="form-input">
+                    <input type="search" placeholder="Search For popular gigs" id="searchInput" class="search">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <!-- Notification Icon -->
+           
+    <div class="profile" title="My Profile">
+                <img src="images/user.jpeg" class="profile-pic" id="profile-icon">
+                <!-- Updated profile info div with registration form -->
+                <div class="profile-info" id="profile-info">
+                    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4">
+            Profile settings
+        </h4>
+        <div class="main-card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">Personal information</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Specialization</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">Social links</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            data-toggle="list"
+                            href="#account-notifications">Notifications</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <div class="card-body media align-items-center">
+                                <img src="images/user.jpeg" alt
+                                    class="d-block ui-w-80">
+                                <div class="media-body ml-4">
+                                    <label class="btn btn-outline-primary">
+                                        Upload new photo
+                                        <input type="file" class="account-settings-fileinput">
+                                    </label> &nbsp;
+                                    <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+                                    <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control mb-1">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Second Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="email" class="form-control mb-1" >
+                                </div>
+                                
+                                 <div class="form-group">
+                                    <label class="form-label">Country</label>
+                                    <select class="custom-select">
+                                        <option>Kenya</option>
+                                        <option>Uganda</option>
+                                        <option>South africa</option>
+                                        <option>Tanzania</option>
+                                        <option>France</option>
+                                        <option>Congo</option>
+                                        <option >Ethiopia</option>
+                                        <option>Malawi</option>
+                                        <option>Zimbabwe</option>
+                                        <option>Somalia</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Current password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">New password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">confirm new password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">BIO</label>
+                                    <textarea class="form-control"
+                                        rows="5"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">What category of service do you want to provide?</label>
+                                     <select class="custom-select">
+                                        <option>Manual Labor services</option>
+                                        <option>Online-Based services</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Enter a category</label>
+                                    <input type="text" placeholder="Eg Repair services,  Wifi installation  ,Software development , Research" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-social-links">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Twitter</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Facebook</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                              
+                                <div class="form-group">
+                                    <label class="form-label">LinkedIn</label>
+                                    <input type="text" class="form-control" value>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Instagram</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="account-notifications">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Activity</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Notify me about new posts</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Notify me when someone views my profile</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input">
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Notify me when someone sends me a message</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Application</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">News and announcements</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input">
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Weekly product updates</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Weekly blog digest</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+            <button type="button" class="btn btn-default">Cancel</button>
+        </div>
+    </div>
+</div>
+</div>
+ <a href="#" class="notification-icon" title="Notifications">
+                <i class='bx bx-bell navbar-icon'></i>
+                <span class="notification-count">0</span>
+            </a>
+            <a href="#" class="message-icon" title="Messages">
+                <i class='fas fa-envelope'></i>
+            </a>
+            <a href="#" class="love-icon" id="menu-toggle" title="Menu">
+    <i class="fas fa-bars"></i>
+</a>
+
+<div class="options-menu" id="options-menu">
+    <ul>
+        <li><a href="#"><i class="fas fa-sync-alt"></i> Refresh Page</a></li>
+        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+    </ul>
+</div>
+
+
+
+</nav>
+   
+<div class="options-container">
+<div class="options">
+    <div class="group-container">
+        <a href="#" class="groups" data-target="graphics-design">Graphics and design</a>
+        <div class="dropdown-content" id="graphics-design">
+            <!-- Subgroups for Graphics and Design -->
+            <a href="#"><i class="fas fa-paint-brush"></i> Graphic Design</a>
+            <a href="#"><i class="fas fa-palette"></i> Logo Design</a>
+            <a href="#"><i class="fas fa-images"></i> Illustration</a>
+            <a href="#"><i class="fas fa-desktop"></i> UI/UX Design</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="programming-tech">Programming and tech</a>
+        <div class="dropdown-content" id="programming-tech">
+            <!-- Subgroups for Programming and Tech -->
+            <a href="#"><i class="fas fa-laptop-code"></i> Web Development</a>
+            <a href="#"><i class="fas fa-mobile-alt"></i> Mobile App Development</a>
+            <a href="#"><i class="fas fa-code"></i> Software Engineering</a>
+            <a href="#"><i class="fas fa-database"></i> Data Science</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="software-dev">Software development</a>
+        <div class="dropdown-content" id="software-dev">
+            <!-- Subgroups for Software Development -->
+            <a href="#"><i class="fas fa-cogs"></i> Agile Development</a>
+            <a href="#"><i class="fas fa-tools"></i> DevOps</a>
+            <a href="#"><i class="fas fa-check-circle"></i> Quality Assurance</a>
+            <a href="#"><i class="fas fa-tasks"></i> Project Management</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="manual-labour">Manual labour services</a>
+        <div class="dropdown-content" id="manual-labour">
+            <!-- Subgroups for Manual Labour Services -->
+            <a href="#"><i class="fas fa-hammer"></i> Carpentry</a>
+            <a href="#"><i class="fas fa-wrench"></i> Plumbing</a>
+            <a href="#"><i class="fas fa-bolt"></i> Electrical</a>
+            <a href="#"><i class="fas fa-paint-roller"></i> Painting</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="business">Business</a>
+        <div class="dropdown-content" id="business">
+            <!-- Subgroups for Business -->
+            <a href="#"><i class="fas fa-chart-line"></i> Entrepreneurship</a>
+            <a href="#"><i class="fas fa-money-bill-wave"></i> Finance</a>
+            <a href="#"><i class="fas fa-briefcase"></i> Marketing</a>
+            <a href="#"><i class="fas fa-users"></i> Management</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="digital-marketing">Digital marketing</a>
+        <div class="dropdown-content" id="digital-marketing">
+            <!-- Subgroups for Digital Marketing -->
+            <a href="#"><i class="fas fa-search"></i> SEO</a>
+            <a href="#"><i class="fab fa-facebook-square"></i> Social Media Marketing</a>
+            <a href="#"><i class="fas fa-file-alt"></i> Content Marketing</a>
+            <a href="#"><i class="fas fa-envelope"></i> Email Marketing</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="academic-writing">Academic writing</a>
+        <div class="dropdown-content" id="academic-writing">
+            <!-- Subgroups for Academic Writing -->
+            <a href="#"><i class="fas fa-pencil-alt"></i> Essay Writing</a>
+            <a href="#"><i class="fas fa-book"></i> Research Papers</a>
+            <a href="#"><i class="fas fa-graduation-cap"></i> Thesis Writing</a>
+            <a href="#"><i class="fas fa-edit"></i> Editing & Proofreading</a>
+        </div>
+    </div>
+    <div class="group-container">
+        <a href="#" class="groups" data-target="consulting">Consulting</a>
+        <div class="dropdown-content" id="consulting">
+            <!-- Subgroups for Consulting -->
+            <a href="#"><i class="fas fa-briefcase"></i> Management Consulting</a>
+            <a href="#"><i class="fas fa-laptop-code"></i> IT Consulting</a>
+            <a href="#"><i class="fas fa-money-bill-wave"></i> Financial Consulting</a>
+            <a href="#"><i class="fas fa-balance-scale"></i> Legal Consulting</a>
+        </div>
+    </div>
+</div></div>
+
+
+<div class="wallace">
+    <div class="content">
+        <div class="userName">
+            <h1>Welcome Back, Wallace</h1>
+        </div>
+        <div class="REC">
+            <div class="recommended">
+                <p><i class="fas fa-globe"></i> Connect with experts around the world</p>
+                <p><i class="fas fa-handshake"></i> Find clients and sort their needs.</p>
+            </div>
+            <div class="business">
+                <p><i class="fas fa-bullhorn"></i> Use Taskify to market yourself and grow</p>
+                <p><i class="fas fa-search"></i> Search for popular projects</p>
+            </div>
+        </div>
+    </div>
+    <div class="display">
+        <div class="item">
+            <div class="item-content">
+                <i class="fas fa-desktop" style="color: orange;"></i>
+                <div class="brief">
+                    <h2>50+</h2>
+                    <p>Services</p>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-color: #eef7ea;">
+            <div class="item-content">
+                <i class="fas fa-user-check" style="color: rgb(238, 140, 189);"></i>
+                <div class="brief">
+                    <h2>100+</h2>
+                    <p>Verified Clients</p>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-color: #f9e4fc;">
+            <div class="item-content">
+                <i class="fas fa-user-tie" style="color: rgb(129, 91, 165);"></i>
+                <div class="brief">
+                    <h2>200+</h2>
+                    <p>Experts</p>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-color: #f1f1e0;">
+            <div class="item-content">
+                <i class="fas fa-star" style="color: rgb(111, 116, 185);"></i>
+                <div class="brief">
+                    <h2>5 Star</h2>
+                    <p>Ratings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="gigs"><h4>Most popular Services</h4></div>
+
+<div class="master-card" id="courseList"></div>
+<div class="choices">
+    <div class="choice" id="choice1">Programming and Tech</div>
+    <div class="choice" id="choice2">Digital marketing</div>
+    <div class="choice" id="choice3">Manual labor services</div>
+    <div class="choice" id="choice4"> Academic Research </div>
+ 
+  </div>
+<div class="section">
+<div class="component-container">
+
+    <!-- Component 1: Web Development -->
+    <div class="component-item choice1">
+        <img src="images/web.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">Beginner</button>
+            <span class="fa-heart fas"></span>
+            <h3>Web Development</h3>
+            <p>Create dynamic websites and web applications with cutting-edge technologies.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                100
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 2: Data Science -->
+    <div class="component-item choice1">
+        <img src="images/r.png" class="picture">
+        <div class="level">
+            <button class="level-up">Intermediate</button>
+            <span class="fa-heart fas"></span>
+            <h3>Graphics design</h3>
+            <p>Create outstanding visual patterns and graphics for businesses and clients.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                78
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 3: Mobile App Development -->
+    <div class="component-item choice1">
+        <img src="images/mobile.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">Adanced</button>
+            <span class="fa-heart fas"></span>
+            <h3>Mobile App Development</h3>
+            <p>Build innovative and user-friendly mobile applications for iOS and Android platforms.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                33
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 4: Artificial Intelligence -->
+    <div class="component-item choice1">
+        <img src="images/ai.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">Pro</button>
+            <span class="fa-heart fas"></span>
+            <h3>Artificial Intelligence</h3>
+            <p>Explore the realm of AI to develop intelligent systems and automate tasks.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                0
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 5: Cybersecurity -->
+    <div class="component-item choice1">
+        <img src="images/cyber.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">Advanced</button>
+            <span class="fa-heart fas"></span>
+            <h3>Cybersecurity</h3>
+            <p>Protect digital systems, networks, and data from cyber threats and attacks.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                18
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 6: Cloud Computing -->
+    <div class="component-item choice1">
+        <img src="images/internet.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">Beginner</button>
+            <span class="fa-heart fas"></span>
+            <h3>Internet service providers</h3>
+            <p>Utilize scalable and on-demand computing resources to provide secure network applications and services.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+            77
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 7: Internet of Things (IoT) -->
+    <div class="component-item choice1">
+        <img src="images/iot.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">Intermediate</button>
+            <span class="fa-heart fas"></span>
+            <h3>Internet of Things (IoT)</h3>
+            <p>Connect and control physical devices and objects over the internet for automation and monitoring.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                9
+            </span>
+        </button>
+    </div>
+
+    <!-- Component 8: Blockchain -->
+    <div class="component-item choice1">
+        <img src="images/it.jpeg" class="picture">
+        <div class="level">
+            <button class="level-up">expert</button>
+            <span class="fa-heart fas"></span>
+            <h3>IT support</h3>
+            <p>Explore The field of information technology and provide viable services to users.</p>
+            <div class="rating">
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="fa-star fas"></span>
+                <span class="rates">5.0/5.0</span>
+            </div>
+        </div>
+        <button class="Btn">
+            <span class="leftContainer">
+                <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+                <span class="like">Like</span>
+            </span>
+            <span class="likeCount">
+                100
+            </span>
+        </button>
+    </div>
+
+
+
+    
+  
+
+
+<!-- COMPONENT 2 -->
+
+<div class="component-item choice2 hide">
+    <img src="images/seo.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Intermediate</button>
+        <span class="fa-heart fas"></span>
+        <h3>SEO Optimization</h3>
+        <p>Enhance website visibility and drive organic traffic through effective search engine optimization techniques.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            17
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice2 hide">
+    <img src="images/market.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Beginner</button>
+        <span class="fa-heart fas"></span>
+        <h3>Social Media Marketing</h3>
+        <p>Engage with target audiences and promote brand awareness through strategic social media campaigns.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            33
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice2 hide">
+    <img src="images/content.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Easy</button>
+        <span class="fa-heart fas"></span>
+        <h3>Content Marketing</h3>
+        <p>Create valuable and relevant content to attract, engage, and convert target audiences into customers.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            22
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice2 hide">
+    <img src="images/product.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">expert</button>
+        <span class="fa-heart fas"></span>
+        <h3>Product Promotion</h3>
+        <p>Reach out to potential customers and nurture leads through targeted product campaigns and personalized content.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            100
+        </span>
+    </button>
+</div>
+
+
+<!-- MANUAL LABOR -->
+    
+
+   <div class="component-item choice3 hide">
+    <img src="images/plumbing.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Beginner</button>
+        <span class="fa-heart fas"></span>
+        <h3>Plumbing Services</h3>
+        <p>Professional plumbing services for repairs, installations, and maintenance of plumbing systems.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            100
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice3 hide">
+    <img src="images/elec.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Expert</button>
+        <span class="fa-heart fas"></span>
+        <h3>Electrical Services</h3>
+        <p>Skilled electrical services for installations, repairs, and maintenance of electrical systems and appliances.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            88
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice3 hide">
+    <img src="images/paint.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Intermediate</button>
+        <span class="fa-heart fas"></span>
+        <h3>Painting Services</h3>
+        <p>Professional painting services for residential and commercial properties, including interior and exterior painting.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            100
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice3 hide">
+    <img src="images/wifi.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">expert</button>
+        <span class="fa-heart fas"></span>
+        <h3>Wifi installation</h3>
+        <p>Intall,deploy and provide wifi services to customers by<p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            80
+        </span>
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- COMPONENT 4 -->
+    <div class="component-item choice4 hide">
+    <img src="images/essay.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Advance</button>
+        <span class="fa-heart fas"></span>
+        <h3>Essay Writing</h3>
+        <p>Professional essay writing services covering various topics and subjects with high-quality research and analysis.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            0
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice4 hide">
+    <img src="images/res.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Beginner</button>
+        <span class="fa-heart fas"></span>
+        <h3>Research Paper Writing</h3>
+        <p>Comprehensive research paper writing services with detailed analysis, citations, and adherence to academic standards.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            2
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice4 hide">
+    <img src="images/thesis.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">expert</button>
+        <span class="fa-heart fas"></span>
+        <h3>Thesis Writing</h3>
+        <p>Specialized thesis writing services for undergraduate, graduate, and postgraduate levels with in-depth research and analysis.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            64
+        </span>
+    </button>
+</div>
+
+<div class="component-item choice4 hide">
+    <img src="images/academic.jpeg" class="picture">
+    <div class="level">
+        <button class="level-up">Advance</button>
+        <span class="fa-heart fas"></span>
+        <h3>Academic Editing</h3>
+        <p>Professional academic editing services to refine and polish research papers, essays, theses, and dissertations.</p>
+        <div class="rating">
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="fa-star fas"></span>
+            <span class="rates">5.0/5.0</span>
+        </div>
+    </div>
+    <button class="Btn">
+        <span class="leftContainer">
+            <svg fill="white" viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"></path></svg>
+            <span class="like">Like</span>
+        </span>
+        <span class="likeCount">
+            100
+        </span>
+    </button>
+</div>
+
+  </div>
+</div>
+
+</div>
+</section>
+
+<div class="wrapper">
+  <i id="left" class="fa-solid fa-angle-left"></i>
+  <ul class="carousel">
+    <li class="card">
+      <div class="img"><img src="images/av6.jpeg" alt="img" draggable="false"></div>
+      <h2>Wallace wambulwa</h2>
+      <span>Software developer</span>
+      <div class="description">
+        <p>I am a software developer specializing in creating robust and efficient applications. With expertise in various programming languages and frameworks, I strive to deliver high-quality solutions that meet client needs.</p>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img"><img src="images/av5.jpeg" alt="img" draggable="false"></div>
+      <h2>Francis NGumba</h2>
+      <span>Graphics designer</span>
+      <div class="description">
+        <p>I am a graphics designer passionate about creating visually appealing designs that resonate with audiences. With a keen eye for detail and creativity, I strive to deliver unique and captivating artwork.</p>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img"><img src="images/av1.jpeg" alt="img" draggable="false"></div>
+      <h2>David Juma</h2>
+      <span>Game developer</span>
+      <div class="description">
+        <p>I am a game developer with a passion for creating immersive and entertaining gaming experiences. With expertise in game design and development, I strive to deliver innovative and engaging games to players worldwide.</p>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img"><img src="images/av2.jpeg" alt="img" draggable="false"></div>
+      <h2>Martin omaya</h2>
+      <span>Script writer</span>
+      <div class="description">
+        <p>I am a script writer dedicated to crafting compelling and memorable stories across various mediums. With a focus on character development and narrative structure, I aim to create scripts that resonate with audiences.</p>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img"><img src="images/av3.jpeg" alt="img" draggable="false"></div>
+      <h2>Alan Isaac</h2>
+      <span>App developer</span>
+      <div class="description">
+        <p>I am an app developer committed to designing and developing innovative mobile applications. With expertise in mobile technologies and user experience design, I aim to create intuitive and user-friendly apps for diverse audiences.</p>
+      </div>
+    </li>
+    <li class="card">
+      <div class="img"><img src="images/av4.jpeg" alt="img" draggable="false"></div>
+      <h2>Vincent Ndubi</h2>
+      <span>Engineering analyst</span>
+      <div class="description">
+        <p>I am an engineering analyst specializing in analyzing and optimizing complex systems and processes. With a focus on data-driven decision-making and problem-solving, I aim to drive efficiency and innovation in engineering projects.</p>
+      </div>
+    </li>
+  </ul>
+  <i id="right" class="fa-solid fa-angle-right"></i>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Taskify. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="scripts/script.js" defer></script>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all the like buttons
+        const likeButtons = document.querySelectorAll('.Btn');
+
+        // Add click event listener to each like button
+        likeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Find the like count element inside the clicked button
+                const likeCountElement = button.querySelector('.likeCount');
+
+                // Get the current like count
+                let currentCount = parseInt(likeCountElement.textContent.replace(/,/g, ''), 10);
+
+                // Increment the like count
+                currentCount++;
+
+                // Update the like count element
+                likeCountElement.textContent = currentCount.toLocaleString();
+            });
+        });
+    });
+</script>
+
+    
+</body>
+</html>

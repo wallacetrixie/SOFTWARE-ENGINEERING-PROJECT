@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .login-option {
+      position: relative; 
+    }
+
+    .login-option::before,
+    .login-option::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 5px;
+      background-color: transparent;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    .login-option::before {
+      transform: translateX(-50%);
+    }
+
+    .login-option::after {
+      transform: translateX(-50%);
+    }
+
+    .login-option:hover::before,
+    .login-option:hover::after {
+      width: calc(50% - 20px); 
+      background-color: #007bff;
+    }
+
+  body {
+      font-family: Arial, sans-serif;   
+      background-color:rgb(239, 240, 235);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #loginContainer h2 {
+    margin-top: 20px; 
+}
+
+
+    .login-container {
+      background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+      padding:0px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      max-width: 1000px;
+      width: 100%;
+    }
+   h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: bold; 
+      letter-spacing: 1px; 
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .login-option {
+      flex: 1;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .login-option:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+    .login-option input[type="radio"]:focus,
+    .login-option input[type="radio"]:active {
+      outline: none;
+    }
+    .login-option label {
+      font-size: 18px;
+      color: #555;
+      transition: color 0.3s ease;
+      display: block;
+    }
+    .login-option:hover label {
+      color: #007bff;
+    }
+    .login-description {
+      font-size: 14px;
+      color: #888;
+    }
+.login-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-link:hover {
+  background-color: #0056b3;
+}
+
+    .login-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container{
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height:100%;
+    min-height: 480px;
+}
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button{
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding:0px;
+    transition: all 0.6s ease-in-out;
+}
+.container form {
+    /* Remove padding */
+    padding: 0;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+#sign-up{
+  height: auto;
+    margin-top: 20px;
+}
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons{
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right, #5c6bc0, #512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+  </style>
+</head>
+<body>
+  <div class="login-container" id="loginContainer">
+    <h2>Welcome Back!</h2>
+    <div class="login-options">
+      <div class="login-option">
+        <input type="radio" id="client" name="login-type" value="client">
+        <label for="client"><i class="fas fa-user"></i> Login as a Client</label><br>
+        <span class="login-description">I want to hire someone</span>
+      </div>
+      <div class="login-option">
+        <input type="radio" id="freelancer" name="login-type" value="freelancer">
+        <label for="freelancer"><i class="fas fa-briefcase"></i> Login as a Freelancer</label><br>
+        <span class="login-description">I am an expert looking for tasks to solve</span>
+      </div>
+      <div class="login-option">
+        <input type="radio" id="labor" name="login-type" value="labor">
+        <label for="labor"><i class="fas fa-tools"></i> Looking for Manual Labor Services</label><br>
+        <span class="login-description">I am looking for manual labor</span>
+      </div>
+    </div>
+ <a href="login_page.html" class="login-link">LOGIN</a>
+
+
+  </div>
+ 
+
+<script>
+
+ document.addEventListener('DOMContentLoaded', function() {
+      var signupLink = document.getElementById('login');
+      
+      signupLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default action of the link
+        var url = this.getAttribute('href');
+        window.open(url, '_blank'); // Open the new page in a new tab
+      });
+    });
+
+  </script>
+</body>
+</html>

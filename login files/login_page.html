@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/styles/login.css"/>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<title></title>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <form id="loginForm" action="/login" method="POST">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Log In</button>
+            <p class="signup-link">Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up</a></p>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signupForm" style="display: none;" action="/register" method="POST">
+            <h2>Sign Up</h2>
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="username" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="password" oninput="checkPasswordStrength()" required>
+            <div id="passwordStrengthMessage" class="error-message" style="display: none;"></div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <button type="submit">Sign Up</button>
+            <p class="login-link">Already have an account? <a href="#" onclick="showLogInForm()">Log In</a></p>
+        </form>
+    </div>
+
+    <script src="/scripts/login.js"></script>
+</body>
+</html>
