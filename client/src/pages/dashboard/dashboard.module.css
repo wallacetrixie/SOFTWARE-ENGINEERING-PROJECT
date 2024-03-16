@@ -1,0 +1,250 @@
+@import "../../App.css";
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-soft);
+  color: var(--text-color);
+  width: 100%;
+
+
+  .browse {
+    display: flex;
+    width: 100%;
+    padding: 10px 0px;
+    align-items: flex-start;
+    background-color: var(--bg);
+    span {
+      font-weight: bold;
+      font-size: 20px;
+      padding: 0px 20px;
+    }
+    a {
+      color: var(--text-color);
+      padding: 0px 20px;
+    }
+  }
+  .workspace {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      padding: 0px 40px;
+      span {
+        padding: 0px 10px;
+        font-size: 22px;
+      }
+      span a {
+        font-size: 14px;
+        color: var(--text-color);
+      }
+    }
+    .right {
+      padding: 0px 50px;
+
+      button {
+        background-image: linear-gradient(
+          to right,
+          #34e89e 0%,
+          #0f3443 51%,
+          #34e89e 100%
+        );
+        padding: 15px 30px;
+        text-transform: uppercase;
+        transition: 0.5s ease-in-out;
+        background-size: 200% auto;
+        color: white;
+        /* box-shadow: 0 0 20px #eee; */
+        border-radius: 10px;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span {
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          padding: 5px 5px;
+          justify-content: space-around;
+        }
+      }
+      button:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .welcome {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    /* border: 1px solid var(--border); */
+    border-radius: 20px;
+    padding: 10px 0px;
+
+    .top {
+      h2 {
+        font-size: 20px;
+        padding: 0px 20px;
+      }
+    }
+    .bottom {
+      display: flex;
+      gap: 30px;
+      padding: 10px 20px;
+      .leftDiv {
+        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        border-radius: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+
+        span {
+          font-weight: bold;
+        }
+        .details {
+          display: flex;
+          justify-content: space-between;
+          .info {
+            display: flex;
+            gap: 10px;
+          }
+          button {
+            background-image: linear-gradient(
+              to right,
+              #007991 0%,
+              #66b09a 51%,
+              #007991 100%
+            );
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s ease-out;
+            background-size: 200% auto;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+          }
+          button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+      .rightDiv {
+        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        span {
+          font-weight: bold;
+        }
+        .details {
+          display: flex;
+          justify-content: space-between;
+          .info {
+            display: flex;
+            gap: 10px;
+          }
+          /* button {
+            border: 1px solid var(--border);
+            background-color: transparent;
+            color: var(--text-color);
+            padding: 0px 30px;
+            border-radius: 5px;
+          } */
+        }
+      }
+    }
+  }
+  .section {
+    width: 100%;
+
+    .heading {
+      font-size: 18px;
+    }
+    .container {
+      display: flex;
+      gap: 50px;
+      width: 100%;
+      /* overflow: scroll; */
+      .left {
+        flex: 1;
+        padding: 0px 10px;
+        position: static;
+        .menu {
+          span {
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 0px;
+            margin: 0px 10px;
+          }
+          hr {
+            border-color: rgba(255, 255, 255, 0.4);
+          }
+          menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            li {
+              list-style: none;
+              padding: 10px 0px 0px;
+              a {
+                color: var(--text-color);
+              }
+            }
+          }
+        }
+      }
+      .right {
+        flex: 8;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .cardsTop {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+        }
+        .cardsDiv {
+          display: flex;
+          width: 100%;
+          flex: 1;
+          overflow: scroll;
+          flex-wrap: nowrap;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .cards {
+            display: flex;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+/* box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+-webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+-moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38); */

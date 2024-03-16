@@ -1,0 +1,106 @@
+@import "../../App.css";
+
+.navbar {
+  display: flex;
+  /* align-items: space-between; */
+  justify-content: space-between;
+  padding: 5px 20px;
+  height: 40px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
+  color: var(--text-color);
+  z-index: 999;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .logo {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--logo);
+    }
+    .menuItems {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      li {
+        list-style-type: none;
+        a {
+          color: var(--text-color);
+        }
+      }
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 0px 5px;
+
+      input {
+        border: none;
+        width: 300px;
+        background-color: transparent;
+        color: var(--text-color);
+        border-radius: 50px;
+        margin: 10px 0px;
+        border-color: transparent;
+        height: 100%;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+          /* display: none; */
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: 480px) {
+      display: none;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

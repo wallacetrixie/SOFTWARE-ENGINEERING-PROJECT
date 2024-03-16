@@ -1,0 +1,35 @@
+:root {
+  --light-text-color: #080202;
+  --light-bg: white;
+  --light-logo: darkblue;
+  --light-bg-soft: #f6f3f3;
+  --light-text-color-soft: #555;
+  --light-border: black;
+
+  --dark-text-color: whitesmoke;
+  --dark-bg: #222;
+  --dark-logo: white;
+  --dark-bg-soft: #555;
+  --dark-text-color-soft: lightgrey;
+  --dark-border: lightgrey;
+  margin: 0;
+}
+
+.app {
+  /* Use the light theme by default */
+  --text-color: var(--light-text-color);
+  --bg: var(--light-bg);
+  --logo: var(--light-logo);
+  --bg-soft: var(--light-bg-soft);
+  --text-color-soft: var(--light-text-color-soft);
+  --border: var(--light-border);
+}
+
+.app.dark-theme {
+  --text-color: var(--dark-text-color);
+  --bg: var(--dark-bg);
+  --logo: var(--dark-logo);
+  --bg-soft: var(--dark-bg-soft);
+  --text-color-soft: var(--dark-text-color-soft);
+  --border: var(--dark-border);
+}
