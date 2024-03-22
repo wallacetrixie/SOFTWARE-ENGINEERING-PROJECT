@@ -1,128 +1,71 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Registration Form Elements
-    const form1 = document.getElementById("form1");
-    const form2 = document.getElementById("form2");
-    const form3 = document.getElementById("form3");
+    const registrationForm = document.getElementById("registration-form");
 
-    // Progress Bars
-    const progressBar1 = document.getElementById("progress-bar1");
-    const progressBar2 = document.getElementById("progress-bar2");
-    const progressBar3 = document.getElementById("progress-bar3");
+    // Progress Bar
+    const progressBar = document.getElementById("progress-bar");
 
-    // Navigation Buttons
-    const nextButton1 = document.getElementById("next-button1");
-    const prevButton2 = document.getElementById("prev-button2");
-    const nextButton2 = document.getElementById("next-button2");
-    const prevButton3 = document.getElementById("prev-button3");
+    // Form Fields
+    const firstName = document.getElementById("first-name");
+    const lastName = document.getElementById("last-name");
+    const email = document.getElementById("email");
+    const phoneNumber = document.getElementById("phone-number");
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const country = document.getElementById("country");
+
+    // Submit Button
     const submitButton = document.getElementById("submit-button");
 
-    // Form 1 Fields
-    const username = document.getElementById("username");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const confirm_password = document.getElementById("confirm-password");
+    // Form Submit Event
+    registrationForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission behavior
 
-    // Form 2 Fields
-    const first_name = document.getElementById("first-name");
-    const last_name = document.getElementById("last-name");
-    const age = document.getElementById("age");
-    const dob = document.getElementById("dob");
-    const profile_image1 = document.getElementById("profile-image1");
+        // Validate form fields
+        if (validateForm()) {
+            const formData = {
+                first_name: firstName.value,
+                last_name: lastName.value,
+                email: email.value,
+                phone_number: phoneNumber.value,
+                title: title.value,
+                description: description.value,
+                name: country.value
+            };
 
-    // Form 3 Fields
-    const country = document.getElementById("country");
-    const phone_number = document.getElementById("phone-number");
-    const city = document.getElementById("city");
-    const education = document.getElementById("education");
-
-    // Form 1 Next Button Click Event
-    nextButton1.addEventListener("click", function () {
-        if (validateForm(form1)) {
-            form1.classList.add("hidden");
-            form2.classList.remove("hidden");
-            updateProgressBar(progressBar1, totalFields1, countFilledFields(form1));
+            // Send form data to server
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Error submitting data to the server');
+                }
+            })
+            .then(data => {
+                console.log('Success:', data);
+                alert('Data submitted successfully!');
+                registrationForm.reset(); // Reset form fields
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error submitting data to the server');
+            });
         } else {
-            alert("Please fill in all fields before proceeding.");
+            alert("Please fill in all fields before submitting.");
         }
     });
-
-    // Form 2 Previous Button Click Event
-    prevButton2.addEventListener("click", function () {
-        form2.classList.add("hidden");
-        form1.classList.remove("hidden");
-        updateProgressBar(progressBar1, totalFields1, countFilledFields(form1));
-    });
-
-    // Form 2 Next Button Click Event
-    nextButton2.addEventListener("click", function () {
-        if (validateForm(form2)) {
-            form2.classList.add("hidden");
-            form3.classList.remove("hidden");
-            updateProgressBar(progressBar2, totalFields2, countFilledFields(form2));
-        } else {
-            alert("Please fill in all fields before proceeding.");
-        }
-    });
-
-    // Form 3 Previous Button Click Event
-    prevButton3.addEventListener("click", function () {
-        form3.classList.add("hidden");
-        form2.classList.remove("hidden");
-        updateProgressBar(progressBar2, totalFields2, countFilledFields(form2));
-    });
-
-    // Form 3 Submit Button Click Event
- // Form 3 Submit Button Click Event
-form3.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    if (validateForm(form3)) {
-        const formData = {
-            username: username.value,
-            email: email.value,
-            password: password.value,
-            confirm_password: confirm_password.value,
-            first_name: first_name.value,
-            last_name: last_name.value,
-            age: age.value,
-            dob: dob.value,
-            country: country.value,
-            phone_number: phone_number.value,
-            city: city.value,
-            education: education.value
-        };
-
-        // Send form data to server
-        fetch('/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Error submitting data to the server');
-            }
-        })
-        .then(data => {
-            console.log('Success:', data);
-            alert('User registered successfully!');
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            alert('Error registering user');
-        });
-    } else {
-        alert("Please fill in all fields before submitting.");
-    }
-});
-
 
     // Update Progress Bar Function
-    function updateProgressBar(progressBar, totalFields, filledFields) {
+    function updateProgressBar() {
+        const totalFields = 7; // Total number of fields in the form
+        const filledFields = countFilledFields();
         const progress = (filledFields / totalFields) * 100;
         progressBar.style.width = progress + '%';
         if (progress === 100) {
@@ -133,9 +76,9 @@ form3.addEventListener("submit", function (event) {
     }
 
     // Count Filled Fields Function
-    function countFilledFields(form) {
+    function countFilledFields() {
         let count = 0;
-        const inputs = form.querySelectorAll("input[type='text'], input[type='number'], input[type='file'], select");
+        const inputs = registrationForm.querySelectorAll("input[type='text'], input[type='email'], input[type='tel'], textarea, select");
         inputs.forEach(input => {
             if (input.value.trim() !== "") {
                 count++;
@@ -145,8 +88,8 @@ form3.addEventListener("submit", function (event) {
     }
 
     // Validate Form Function
-    function validateForm(form) {
-        const inputs = form.querySelectorAll("input[type='text'], input[type='number'], input[type='file'], select");
+    function validateForm() {
+        const inputs = registrationForm.querySelectorAll("input[type='text'], input[type='email'], input[type='tel'], textarea, select");
         let isValid = true;
         inputs.forEach(input => {
             if (input.value.trim() === "") {
@@ -156,13 +99,6 @@ form3.addEventListener("submit", function (event) {
         return isValid;
     }
 
-    // Total Fields for each form
-    const totalFields1 = 4; // Total fields in Form 1
-    const totalFields2 = 5; // Total fields in Form 2
-    const totalFields3 = 4; // Total fields in Form 3
-
-    // Initially update progress bars
-    updateProgressBar(progressBar1, totalFields1, 0);
-    updateProgressBar(progressBar2, totalFields2, 0);
-    updateProgressBar(progressBar3, totalFields3, 0);
+    // Initial Progress Bar Update
+    updateProgressBar();
 });

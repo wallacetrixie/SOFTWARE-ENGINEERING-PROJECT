@@ -1,0 +1,60 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and some spacing to the main container */
+.quiz-container {
+    background-color: #e0f371a8;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Style the question heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the answer container */
+.question-container {
+    margin-bottom: 20px;
+}
+
+/* Style the answer options */
+#answer-buttons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style each answer option */
+#answer-buttons li {
+    margin-bottom: 10px;
+}
+
+/* Style the back and next buttons */
+.back, .next {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Change button background color on hover */
+.back:hover, .next:hover {
+    background-color: #45a049;
+}
+
+/* Add some space above the buttons */
+.back, .next {
+    margin-top: 10px;
+}

@@ -3,74 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <!-- Font Awesome CDN -->
+    <title>Create Profile Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
-    <!-- Stylish Text -->
-    <div class="profile-heading">
-        <h2>Create Your Profile</h2>
+    <div class="container">
+        <form action="/submit-user-details" method="post">
+            <h2>Create Profile</h2>
+            <div class="form-group">
+                <label for="fullname"><i class="fas fa-user"></i> Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone"><i class="fas fa-phone"></i> Telephone Number:</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+            <div class="form-group">
+                <label for="years"><i class="fas fa-calendar-alt"></i> Years Old:</label>
+                <input type="number" id="years" name="years" required>
+            </div>
+            <div class="form-group">
+                <label for="interest"><i class="fas fa-tag"></i> Interest:</label>
+                <input type="text" id="interest" name="interest" required>
+            </div>
+            <div class="form-group">
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" rows="4" required></textarea>
+            </div>
+            <button type="submit">Create Profile</button>
+        </form>
     </div>
-
-    <!-- Registration Form Section -->
-    <section id="registration-form">
-        <div class="form-container">
-            <!-- Form 1 - Account Details -->
-            <form id="form1">
-                <input type="text" placeholder="Username" id="username" required>
-                <input type="email" placeholder="Email Address" id="email" required>
-                <input type="password" placeholder="Password" id="password" required>
-                <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar1"></div>
-                </div>
-                <div class="navigation-buttons">
-                    <button type="button" id="next-button1">Next <i class="fas fa-chevron-right"></i></button>
-                </div>
-            </form>
-
-            <!-- Form 2 - Personal Information -->
-            <form id="form2" class="hidden">
-                <input type="text" placeholder="First Name" id="first-name" required>
-                <input type="text" placeholder="Last Name" id="last-name" required>
-                <input type="number" placeholder="Age" id="age" required>
-                <input type="date" placeholder="Date of Birth" id="dob" required>
-                <input type="file" placeholder="Upload your image" accept="image/*" id="profile-image1" required>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar2"></div>
-                </div>
-                <div class="navigation-buttons">
-                    <button type="button" id="prev-button2"><i class="fas fa-chevron-left"></i> Previous</button>
-                    <button type="button" id="next-button2">Next <i class="fas fa-chevron-right"></i></button>
-                </div>
-            </form>
-
-            <!-- Form 3 - Location Details -->
-            <form id="form3" class="hidden">
-                <input type="text" placeholder="Country" id="country" required>
-                <input type="tel" placeholder="Phone Number" id="phone-number" required>
-                <input type="text" placeholder="City" id="city" required>
-                <select id="education" required>
-                    <option value="" disabled selected>Select Highest Education</option>
-                    <option value="High School">High School</option>
-                    <option value="Bachelor's Degree">Bachelor's Degree</option>
-                    <option value="Master's Degree">Master's Degree</option>
-                    <option value="Ph.D.">Ph.D.</option>
-                    <option value="Other">Other</option>
-                </select>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar3"></div>
-                </div>
-                <div class="navigation-buttons">
-                    <button type="button" id="prev-button3"><i class="fas fa-chevron-left"></i> Previous</button>
-                    <button type="submit" id="submit-button" class="submit-button">Submit</button>
-                </div>
-            </form>
-
-        </div>
-    </section>
-    <script src="scripts/form.js"></script>
 </body>
 </html>
